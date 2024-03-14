@@ -53,13 +53,19 @@ public class IfElse{
 
         //for loop ... Example 2
         System.out.println("Inner For Loop");
-        for(i=0;i<n;i++){
-            for(j=0;j<n;j++){
+        for(i=1;i<=5;i++){
+            System.out.println("Iteration " + i);
+            for(j=1;j<5;j++){
+                if(i==1 && j==1)
+                    continue;
                 System.out.print("*");
             }
+            if(i==2)
+                break;
             System.out.print("\n");
         }
-
+        System.out.print("\n");
+        
         //Switch
         System.out.println("Switch");
         int num1,num2;
@@ -91,6 +97,8 @@ public class IfElse{
                 result = num1%num2;
                 System.out.println(result);
                 break;
+            default :
+                System.out.println("Invalid Operator");
         }
 
     }
